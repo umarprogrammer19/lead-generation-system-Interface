@@ -34,7 +34,7 @@ export default function Dashboard() {
       const res = await fetch(`http://127.0.0.1:8000/run/${platform}`, { method: 'POST' })
       const data = await res.json()
       alert(`Scraping finished! Saved ${data.leads_saved} new leads.`)
-      fetchLeads() // Refresh list
+      fetchLeads() // Refresh lists
     } catch (err) {
       alert('Failed to connect to Python backend. Is main.py running?')
       console.error(err)
